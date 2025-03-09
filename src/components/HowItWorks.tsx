@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import AnimatedStep from './AnimatedStep';
-import { Database, PieChart, Bot, Zap, Users } from 'lucide-react';
+import { Database, PieChart, Bot, Zap, Users, FileText, Server, Grid, Globe } from 'lucide-react';
 
 const stepData = [
   {
@@ -11,12 +10,65 @@ const stepData = [
     icon: <Database className="w-6 h-6" />,
     animationContent: (
       <div className="relative w-full h-full flex flex-col items-center justify-center">
-        <div className="w-20 h-20 bg-vincero-blue/40 rounded-full flex items-center justify-center">
-          <Database className="w-8 h-8 text-vincero-lightBlue" />
+        <div className="grid grid-cols-2 gap-3 mb-8 w-full max-w-xs">
+          <div className="data-source-card flex items-center justify-center p-2 bg-vincero-darkBlue/60 border border-vincero-lightBlue/30 rounded-md">
+            <FileText className="w-5 h-5 text-vincero-lightBlue mr-2" />
+            <span className="text-xs text-white/90">CSV</span>
+          </div>
+          <div className="data-source-card flex items-center justify-center p-2 bg-vincero-darkBlue/60 border border-vincero-lightBlue/30 rounded-md">
+            <Server className="w-5 h-5 text-vincero-orange mr-2" />
+            <span className="text-xs text-white/90">API</span>
+          </div>
+          <div className="data-source-card flex items-center justify-center p-2 bg-vincero-darkBlue/60 border border-vincero-lightBlue/30 rounded-md">
+            <Grid className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-xs text-white/90">CRM</span>
+          </div>
+          <div className="data-source-card flex items-center justify-center p-2 bg-vincero-darkBlue/60 border border-vincero-lightBlue/30 rounded-md">
+            <Globe className="w-5 h-5 text-green-400 mr-2" />
+            <span className="text-xs text-white/90">Base Datos</span>
+          </div>
         </div>
-        <div className="w-1 h-12 bg-gradient-to-b from-vincero-lightBlue to-transparent"></div>
-        <div className="w-32 h-12 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex items-center justify-center">
-          <span className="text-xs text-vincero-lightBlue">Datos procesados</span>
+        
+        <div className="relative w-full flex justify-center mb-4">
+          <div className="absolute left-1/4 top-0 w-0.5 h-10 bg-gradient-to-b from-vincero-lightBlue to-transparent data-flow-line"></div>
+          <div className="absolute right-1/4 top-0 w-0.5 h-12 bg-gradient-to-b from-vincero-orange to-transparent data-flow-line delay-1"></div>
+          <div className="absolute left-1/3 top-0 w-0.5 h-14 bg-gradient-to-b from-purple-400 to-transparent data-flow-line delay-2"></div>
+          <div className="absolute right-1/3 top-0 w-0.5 h-8 bg-gradient-to-b from-green-400 to-transparent data-flow-line delay-3"></div>
+          
+          <div className="absolute left-1/4 top-3 w-1.5 h-1.5 rounded-full bg-vincero-lightBlue data-point"></div>
+          <div className="absolute right-1/4 top-5 w-1.5 h-1.5 rounded-full bg-vincero-orange data-point delay-1"></div>
+          <div className="absolute left-1/3 top-7 w-1.5 h-1.5 rounded-full bg-purple-400 data-point delay-2"></div>
+          <div className="absolute right-1/3 top-2 w-1.5 h-1.5 rounded-full bg-green-400 data-point delay-3"></div>
+        </div>
+        
+        <div className="w-24 h-24 bg-vincero-blue/40 rounded-full flex items-center justify-center pulse-animation relative mb-3">
+          <div className="absolute w-full h-full rounded-full bg-vincero-blue/20 pulse-ring"></div>
+          <Database className="w-10 h-10 text-vincero-lightBlue" />
+        </div>
+        
+        <div className="w-1 h-8 bg-gradient-to-b from-vincero-lightBlue to-transparent"></div>
+        
+        <div className="w-64 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md p-3">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-xs text-vincero-lightBlue">Datos Procesados</span>
+            <div className="flex space-x-1">
+              <div className="w-2 h-2 bg-vincero-lightBlue rounded-full pulse-small"></div>
+            </div>
+          </div>
+          <div className="space-y-2">
+            <div className="h-2 w-full bg-white/10 rounded-full">
+              <div className="h-full w-2/3 bg-vincero-lightBlue/70 rounded-full data-progress"></div>
+            </div>
+            <div className="h-2 w-full bg-white/10 rounded-full">
+              <div className="h-full w-3/5 bg-vincero-orange/70 rounded-full data-progress delay-1"></div>
+            </div>
+            <div className="h-2 w-full bg-white/10 rounded-full">
+              <div className="h-full w-4/5 bg-purple-400/70 rounded-full data-progress delay-2"></div>
+            </div>
+            <div className="h-2 w-full bg-white/10 rounded-full">
+              <div className="h-full w-1/2 bg-green-400/70 rounded-full data-progress delay-3"></div>
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -176,7 +228,6 @@ const HowItWorks = () => {
   }, []);
 
   useEffect(() => {
-    // Auto-rotate active step every 5 seconds
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev === 5 ? 1 : prev + 1));
     }, 5000);
