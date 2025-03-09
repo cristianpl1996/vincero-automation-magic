@@ -276,52 +276,63 @@ const stepData = [
     description: 'WhatsApp, SMS y correo para maximizar resultados.',
     icon: <Users className="w-6 h-6" />,
     animationContent: (
-      <div className="relative w-full h-full flex flex-col items-center justify-center pt-2">
-        <div className="mb-5 text-center">
-          <span className="text-sm text-vincero-lightBlue font-medium">Comparación de Resultados</span>
+      <div className="relative w-full h-full flex flex-col items-center justify-center">
+        <div className="mb-4 text-center">
+          <span className="text-sm text-vincero-lightBlue font-medium">Transformación de Métricas</span>
         </div>
         
         <div className="w-full max-w-md px-4">
           <div className="flex justify-between mb-2">
-            <div className="text-sm font-medium text-white/90">Impacto previo</div>
-            <div className="text-sm font-medium text-vincero-orange">Impacto con Vincero</div>
+            <div className="text-sm font-medium text-white/80">Resultados antes de Vincero</div>
+            <div className="text-sm font-medium text-vincero-orange">Resultados después de Vincero</div>
           </div>
           
-          <div className="relative w-full h-48 mb-2 border-b border-l border-white/10">
+          <div className="relative w-full h-44 mb-2 border-b border-l border-white/20 bg-vincero-darkBlue/20 rounded-md overflow-hidden">
             <div className="absolute left-0 right-0 top-0 h-px bg-white/10"></div>
             <div className="absolute left-0 right-0 top-1/4 h-px bg-white/10"></div>
             <div className="absolute left-0 right-0 top-1/2 h-px bg-white/10"></div>
             <div className="absolute left-0 right-0 top-3/4 h-px bg-white/10"></div>
             
+            <div className="absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-white/10 z-10"></div>
+            
             <div className="absolute left-[15%] bottom-0 flex flex-col items-center">
-              <div className="relative w-12 mx-4">
-                <div className="absolute bottom-0 left-0 w-5 h-16 bg-white/10 rounded-t"></div>
-                <div className="absolute bottom-0 right-0 w-5 h-32 bg-vincero-orange/20 rounded-t">
-                  <div className="absolute bottom-0 w-full h-0 bg-vincero-orange rounded-t impact-bar"></div>
+              <div className="relative w-16 mx-4">
+                <div className="absolute bottom-0 left-1 w-6 h-16 bg-white/20 rounded-t">
+                  <div className="absolute bottom-0 w-full h-16 bg-white/30 rounded-t"></div>
+                </div>
+                <div className="absolute bottom-0 right-1 w-6 h-40 bg-vincero-orange/10 rounded-t">
+                  <div className="absolute bottom-0 w-full h-0 bg-vincero-orange rounded-t metric-bar-grow delay-100"></div>
                 </div>
               </div>
               <span className="text-xs mt-2 text-white/70">Conversión</span>
             </div>
             
             <div className="absolute left-[50%] -translate-x-1/2 bottom-0 flex flex-col items-center">
-              <div className="relative w-12 mx-4">
-                <div className="absolute bottom-0 left-0 w-5 h-24 bg-white/10 rounded-t"></div>
-                <div className="absolute bottom-0 right-0 w-5 h-42 bg-vincero-lightBlue/20 rounded-t">
-                  <div className="absolute bottom-0 w-full h-0 bg-vincero-lightBlue rounded-t impact-bar delay-1"></div>
+              <div className="relative w-16 mx-4">
+                <div className="absolute bottom-0 left-1 w-6 h-24 bg-white/20 rounded-t">
+                  <div className="absolute bottom-0 w-full h-24 bg-white/30 rounded-t"></div>
+                </div>
+                <div className="absolute bottom-0 right-1 w-6 h-40 bg-vincero-lightBlue/10 rounded-t">
+                  <div className="absolute bottom-0 w-full h-0 bg-vincero-lightBlue rounded-t metric-bar-grow delay-300"></div>
                 </div>
               </div>
               <span className="text-xs mt-2 text-white/70">Engagement</span>
             </div>
             
             <div className="absolute right-[15%] bottom-0 flex flex-col items-center">
-              <div className="relative w-12 mx-4">
-                <div className="absolute bottom-0 left-0 w-5 h-12 bg-white/10 rounded-t"></div>
-                <div className="absolute bottom-0 right-0 w-5 h-28 bg-white/20 rounded-t">
-                  <div className="absolute bottom-0 w-full h-0 bg-white/80 rounded-t impact-bar delay-2"></div>
+              <div className="relative w-16 mx-4">
+                <div className="absolute bottom-0 left-1 w-6 h-12 bg-white/20 rounded-t">
+                  <div className="absolute bottom-0 w-full h-12 bg-white/30 rounded-t"></div>
+                </div>
+                <div className="absolute bottom-0 right-1 w-6 h-40 bg-white/20 rounded-t">
+                  <div className="absolute bottom-0 w-full h-0 bg-white/80 rounded-t metric-bar-grow delay-500"></div>
                 </div>
               </div>
               <span className="text-xs mt-2 text-white/70">Retención</span>
             </div>
+            
+            <div className="absolute left-[10%] top-2 text-xs text-white/50">Antes</div>
+            <div className="absolute right-[10%] top-2 text-xs text-vincero-orange">Después</div>
           </div>
           
           <div className="flex justify-between w-full text-xs text-white/60">
@@ -332,8 +343,8 @@ const stepData = [
             <div>100%</div>
           </div>
           
-          <div className="mt-5 text-center">
-            <span className="text-sm text-white/80">Aumenta tus métricas clave hasta un <span className="font-bold text-vincero-orange">95%</span> con estrategias optimizadas</span>
+          <div className="mt-4 text-center">
+            <span className="text-sm text-white/80">Incrementa tus métricas clave hasta un <span className="font-bold text-vincero-orange">95%</span> con estrategias optimizadas</span>
           </div>
         </div>
       </div>
