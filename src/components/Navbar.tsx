@@ -26,8 +26,12 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="text-xl font-extrabold text-white group">
-              <span className="text-vincero-orange mr-1">V</span>incero
+            <a href="#" className="group">
+              <img 
+                src="/lovable-uploads/ee944ce6-8fe0-4d80-90e2-830739859656.png" 
+                alt="Vincero" 
+                className="h-8 transition-all duration-300 hover:opacity-90"
+              />
               <span className="block h-0.5 w-0 group-hover:w-full bg-vincero-lightBlue transition-all duration-300"></span>
             </a>
           </div>
