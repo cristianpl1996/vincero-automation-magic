@@ -219,26 +219,51 @@ const stepData = [
     icon: <Zap className="w-6 h-6" />,
     animationContent: (
       <div className="relative w-full h-full flex items-center justify-center">
-        <div className="flex flex-col items-center">
-          <div className="w-40 h-12 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex items-center justify-center mb-4">
-            <span className="text-xs text-white">Campaña creada</span>
-          </div>
-          <div className="relative flex">
-            <div className="absolute w-32 h-0.5 bg-vincero-orange top-6 -left-16 z-0"></div>
-            <div className="absolute w-32 h-0.5 bg-vincero-orange top-6 -right-16 z-0"></div>
-            <div className="w-12 h-12 bg-vincero-orange/20 rounded-full flex items-center justify-center z-10">
-              <Zap className="w-6 h-6 text-vincero-orange" />
+        <div className="flex flex-col items-center w-full max-w-xl">
+          <div className="relative mb-12">
+            <div className="animate-pulse-ring absolute -inset-2 bg-vincero-orange/20 rounded-lg blur"></div>
+            <div className="w-48 h-14 bg-vincero-darkBlue/50 border border-vincero-orange/40 rounded-lg flex items-center justify-center transform transition-all duration-500 hover:scale-105">
+              <Zap className="w-5 h-5 text-vincero-orange mr-2" />
+              <span className="text-sm text-white font-medium">Campaña creada</span>
             </div>
           </div>
-          <div className="flex mt-4 space-x-6">
-            <div className="w-20 h-20 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex items-center justify-center">
-              <span className="text-xs text-white">SMS</span>
-            </div>
-            <div className="w-20 h-20 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex items-center justify-center">
-              <span className="text-xs text-white">Email</span>
-            </div>
-            <div className="w-20 h-20 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex items-center justify-center">
-              <span className="text-xs text-white">WhatsApp</span>
+
+          <div className="relative w-full">
+            <div className="absolute top-0 left-1/4 w-1/2 h-px bg-gradient-to-r from-vincero-orange via-vincero-lightBlue to-vincero-orange campaign-flow-line"></div>
+            
+            <div className="grid grid-cols-3 gap-8">
+              <div className="channel-card relative">
+                <div className="animate-pulse-ring absolute -inset-1 bg-vincero-orange/20 rounded-lg blur opacity-0 channel-pulse"></div>
+                <div className="w-full h-28 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-lg flex flex-col items-center justify-center p-4 transform hover:scale-105 transition-all duration-300">
+                  <Smartphone className="w-8 h-8 text-vincero-orange mb-2" />
+                  <span className="text-sm text-white/90">SMS</span>
+                  <div className="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden">
+                    <div className="h-full bg-vincero-orange/70 rounded-full channel-progress"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="channel-card relative">
+                <div className="animate-pulse-ring absolute -inset-1 bg-vincero-lightBlue/20 rounded-lg blur opacity-0 channel-pulse"></div>
+                <div className="w-full h-28 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-lg flex flex-col items-center justify-center p-4 transform hover:scale-105 transition-all duration-300">
+                  <Mail className="w-8 h-8 text-vincero-lightBlue mb-2" />
+                  <span className="text-sm text-white/90">Email</span>
+                  <div className="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden">
+                    <div className="h-full bg-vincero-lightBlue/70 rounded-full channel-progress delay-1"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="channel-card relative">
+                <div className="animate-pulse-ring absolute -inset-1 bg-green-400/20 rounded-lg blur opacity-0 channel-pulse"></div>
+                <div className="w-full h-28 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-lg flex flex-col items-center justify-center p-4 transform hover:scale-105 transition-all duration-300">
+                  <MessageSquare className="w-8 h-8 text-green-400 mb-2" />
+                  <span className="text-sm text-white/90">WhatsApp</span>
+                  <div className="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden">
+                    <div className="h-full bg-green-400/70 rounded-full channel-progress delay-2"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
