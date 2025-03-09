@@ -135,76 +135,76 @@ const stepData = [
     icon: <Bot className="w-6 h-6" />,
     animationContent: (
       <div className="relative w-full h-full flex items-center justify-center">
-        <div className="w-full bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md p-5 h-full">
-          <div className="flex justify-between mb-3">
-            <span className="text-sm text-vincero-lightBlue font-semibold">Agente de Reactivación</span>
+        <div className="w-full h-full bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md p-4 flex flex-col overflow-hidden">
+          <div className="flex justify-between mb-2">
+            <span className="text-xs text-vincero-lightBlue font-semibold">Agente de Reactivación</span>
             <div className="flex space-x-1">
               <div className="w-2 h-2 bg-vincero-orange rounded-full pulse-small"></div>
               <div className="w-2 h-2 bg-vincero-lightBlue rounded-full pulse-small"></div>
             </div>
           </div>
           
-          <div className="space-y-4">
-            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="flex items-center mb-2">
-                <Target className="w-4 h-4 text-vincero-orange mr-2" />
+          <div className="space-y-2 flex-1 overflow-y-auto">
+            <div className="bg-vincero-blue/20 rounded-md p-2 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="flex items-center mb-1">
+                <Target className="w-3 h-3 text-vincero-orange mr-1" />
                 <span className="text-xs font-medium text-white">Definir objetivo</span>
               </div>
-              <div className="h-6 w-full bg-white/10 rounded-md flex items-center px-2">
+              <div className="h-5 w-full bg-white/10 rounded-md flex items-center px-2">
                 <span className="text-xs text-white/70">Reactivar clientes inactivos</span>
               </div>
             </div>
             
-            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-              <div className="flex items-center mb-2">
-                <Settings className="w-4 h-4 text-vincero-lightBlue mr-2" />
+            <div className="bg-vincero-blue/20 rounded-md p-2 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+              <div className="flex items-center mb-1">
+                <Settings className="w-3 h-3 text-vincero-lightBlue mr-1" />
                 <span className="text-xs font-medium text-white">Canales de comunicación</span>
               </div>
               <div className="flex space-x-2">
-                <div className="flex items-center bg-vincero-blue/30 px-2 py-1 rounded">
-                  <MessageSquare className="w-3 h-3 text-green-400 mr-1" />
-                  <span className="text-xs text-white">WhatsApp</span>
+                <div className="flex items-center bg-vincero-blue/30 px-1.5 py-0.5 rounded text-[10px]">
+                  <MessageSquare className="w-2.5 h-2.5 text-green-400 mr-1" />
+                  <span className="text-white">WhatsApp</span>
                 </div>
-                <div className="flex items-center bg-vincero-blue/30 px-2 py-1 rounded">
-                  <Smartphone className="w-3 h-3 text-vincero-orange mr-1" />
-                  <span className="text-xs text-white">SMS</span>
+                <div className="flex items-center bg-vincero-blue/30 px-1.5 py-0.5 rounded text-[10px]">
+                  <Smartphone className="w-2.5 h-2.5 text-vincero-orange mr-1" />
+                  <span className="text-white">SMS</span>
                 </div>
-                <div className="flex items-center bg-vincero-blue/30 px-2 py-1 rounded opacity-50">
-                  <Mail className="w-3 h-3 text-vincero-lightBlue mr-1" />
-                  <span className="text-xs text-white">Email</span>
+                <div className="flex items-center bg-vincero-blue/30 px-1.5 py-0.5 rounded opacity-50 text-[10px]">
+                  <Mail className="w-2.5 h-2.5 text-vincero-lightBlue mr-1" />
+                  <span className="text-white">Email</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1s" }}>
-              <div className="flex items-center mb-2">
-                <MessageSquare className="w-4 h-4 text-vincero-lightBlue mr-2" />
+            <div className="bg-vincero-blue/20 rounded-md p-2 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1s" }}>
+              <div className="flex items-center mb-1">
+                <MessageSquare className="w-3 h-3 text-vincero-lightBlue mr-1" />
                 <span className="text-xs font-medium text-white">Mensaje personalizado</span>
               </div>
-              <div className="h-16 w-full bg-white/10 rounded-md p-2 overflow-hidden relative">
-                <div className="text-xs text-white/70">¡Hola [nombre]! Te extrañamos en...</div>
+              <div className="h-12 w-full bg-white/10 rounded-md p-2 overflow-hidden relative">
+                <div className="text-[10px] text-white/70">¡Hola [nombre]! Te extrañamos en...</div>
                 <div className="absolute bottom-0 left-0 h-0.5 bg-vincero-orange data-progress delay-2 w-0"></div>
               </div>
             </div>
             
-            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1.4s" }}>
-              <div className="flex items-center mb-2">
-                <Bot className="w-4 h-4 text-vincero-orange mr-2" />
+            <div className="bg-vincero-blue/20 rounded-md p-2 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1.4s" }}>
+              <div className="flex items-center mb-1">
+                <Bot className="w-3 h-3 text-vincero-orange mr-1" />
                 <span className="text-xs font-medium text-white">Automatización</span>
               </div>
               <div className="flex space-x-2">
                 <div className="flex items-center">
-                  <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
-                  <span className="text-xs text-white/70">Envío automático</span>
+                  <CheckCircle className="w-2.5 h-2.5 text-green-400 mr-0.5" />
+                  <span className="text-[10px] text-white/70">Envío automático</span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
-                  <span className="text-xs text-white/70">Monitoreo</span>
+                  <CheckCircle className="w-2.5 h-2.5 text-green-400 mr-0.5" />
+                  <span className="text-[10px] text-white/70">Monitoreo</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-vincero-orange/30 text-white text-xs font-medium text-center py-2 rounded-md cursor-pointer transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1.8s" }}>
+            <div className="bg-vincero-orange/30 text-white text-xs font-medium text-center py-1.5 rounded-md cursor-pointer transform transition-all duration-500 opacity-0 animate-fade-in mt-1" style={{ animationDelay: "1.8s" }}>
               Activar Agente
             </div>
           </div>
