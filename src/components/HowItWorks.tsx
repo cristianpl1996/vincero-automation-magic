@@ -57,7 +57,7 @@ const stepData = [
           </div>
           <div className="space-y-2">
             <div className="h-2 w-full bg-white/10 rounded-full">
-              <div className="h-full w-2/3 bg-vincero-lightBlue/70 rounded-full data-progress"></div>
+              <div className="h-full w-2/3 bg-vincero-orange/70 rounded-full data-progress"></div>
             </div>
             <div className="h-2 w-full bg-white/10 rounded-full">
               <div className="h-full w-3/5 bg-vincero-orange/70 rounded-full data-progress delay-1"></div>
@@ -276,27 +276,65 @@ const stepData = [
     description: 'WhatsApp, SMS y correo para maximizar resultados.',
     icon: <Users className="w-6 h-6" />,
     animationContent: (
-      <div className="relative w-full h-full flex flex-col items-center justify-center">
-        <div className="mb-4 text-center">
-          <span className="text-xs text-vincero-lightBlue">Audiencia impactada</span>
+      <div className="relative w-full h-full flex flex-col items-center justify-center pt-2">
+        <div className="mb-5 text-center">
+          <span className="text-sm text-vincero-lightBlue font-medium">Comparación de Resultados</span>
         </div>
-        <div className="flex space-x-3">
-          <div className="flex flex-col items-center">
-            <div className="w-4 h-16 bg-gradient-to-t from-vincero-orange to-transparent rounded-t-sm"></div>
-            <div className="text-xs mt-1 text-white/70">+30%</div>
+        
+        <div className="w-full max-w-md px-4">
+          <div className="flex justify-between mb-2">
+            <div className="text-sm font-medium text-white/90">Impacto previo</div>
+            <div className="text-sm font-medium text-vincero-orange">Impacto con Vincero</div>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="w-4 h-24 bg-gradient-to-t from-vincero-lightBlue to-transparent rounded-t-sm"></div>
-            <div className="text-xs mt-1 text-white/70">+45%</div>
+          
+          <div className="relative w-full h-48 mb-2 border-b border-l border-white/10">
+            <div className="absolute left-0 right-0 top-0 h-px bg-white/10"></div>
+            <div className="absolute left-0 right-0 top-1/4 h-px bg-white/10"></div>
+            <div className="absolute left-0 right-0 top-1/2 h-px bg-white/10"></div>
+            <div className="absolute left-0 right-0 top-3/4 h-px bg-white/10"></div>
+            
+            <div className="absolute left-[15%] bottom-0 flex flex-col items-center">
+              <div className="relative w-12 mx-4">
+                <div className="absolute bottom-0 left-0 w-5 h-16 bg-white/10 rounded-t"></div>
+                <div className="absolute bottom-0 right-0 w-5 h-32 bg-vincero-orange/20 rounded-t">
+                  <div className="absolute bottom-0 w-full h-0 bg-vincero-orange rounded-t impact-bar"></div>
+                </div>
+              </div>
+              <span className="text-xs mt-2 text-white/70">Conversión</span>
+            </div>
+            
+            <div className="absolute left-[50%] -translate-x-1/2 bottom-0 flex flex-col items-center">
+              <div className="relative w-12 mx-4">
+                <div className="absolute bottom-0 left-0 w-5 h-24 bg-white/10 rounded-t"></div>
+                <div className="absolute bottom-0 right-0 w-5 h-42 bg-vincero-lightBlue/20 rounded-t">
+                  <div className="absolute bottom-0 w-full h-0 bg-vincero-lightBlue rounded-t impact-bar delay-1"></div>
+                </div>
+              </div>
+              <span className="text-xs mt-2 text-white/70">Engagement</span>
+            </div>
+            
+            <div className="absolute right-[15%] bottom-0 flex flex-col items-center">
+              <div className="relative w-12 mx-4">
+                <div className="absolute bottom-0 left-0 w-5 h-12 bg-white/10 rounded-t"></div>
+                <div className="absolute bottom-0 right-0 w-5 h-28 bg-white/20 rounded-t">
+                  <div className="absolute bottom-0 w-full h-0 bg-white/80 rounded-t impact-bar delay-2"></div>
+                </div>
+              </div>
+              <span className="text-xs mt-2 text-white/70">Retención</span>
+            </div>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="w-4 h-12 bg-gradient-to-t from-white/60 to-transparent rounded-t-sm"></div>
-            <div className="text-xs mt-1 text-white/70">+25%</div>
+          
+          <div className="flex justify-between w-full text-xs text-white/60">
+            <div>0%</div>
+            <div>25%</div>
+            <div>50%</div>
+            <div>75%</div>
+            <div>100%</div>
           </div>
-        </div>
-        <div className="flex justify-between w-full max-w-xs mt-4">
-          <div className="text-xs text-white/70">Antes</div>
-          <div className="text-xs text-white/70">Después</div>
+          
+          <div className="mt-5 text-center">
+            <span className="text-sm text-white/80">Aumenta tus métricas clave hasta un <span className="font-bold text-vincero-orange">95%</span> con estrategias optimizadas</span>
+          </div>
         </div>
       </div>
     )

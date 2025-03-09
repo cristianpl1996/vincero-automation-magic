@@ -473,3 +473,25 @@ html {
   from { width: 0; }
   to { width: 100%; }
 }
+
+/* Impact bar animations */
+.impact-bar {
+  animation: grow-bar 2.5s forwards ease-out;
+}
+
+.impact-bar.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.impact-bar.delay-2 {
+  animation-delay: 1s;
+}
+
+@keyframes grow-bar {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
