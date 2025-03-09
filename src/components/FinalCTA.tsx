@@ -30,7 +30,7 @@ const FinalCTA = () => {
   }, []);
   
   return (
-    <div id="contact" ref={sectionRef} className="section-padding bg-cta-gradient relative overflow-hidden">
+    <div id="contact" ref={sectionRef} className="py-24 bg-cta-gradient relative overflow-hidden">
       <div className="absolute w-full h-full top-0 left-0">
         <div className="absolute w-96 h-96 bg-vincero-orange/10 rounded-full blur-3xl top-1/2 -right-20 transform -translate-y-1/2"></div>
         <div className="absolute w-80 h-80 bg-vincero-blue/10 rounded-full blur-3xl top-1/3 -left-20"></div>
@@ -38,7 +38,7 @@ const FinalCTA = () => {
       
       <div 
         ref={contentRef}
-        className="w-full py-8 relative z-10 opacity-0"
+        className="container mx-auto px-6 py-8 relative z-10 opacity-0"
       >
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6">

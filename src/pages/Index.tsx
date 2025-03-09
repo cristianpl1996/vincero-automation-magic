@@ -39,13 +39,11 @@ const Index = () => {
   return (
     <div className="bg-vincero-black text-white">
       <Navbar />
-      <div className="container-responsive">
-        <Hero />
-        <HowItWorks />
-        <Benefits />
-        <Security />
-        <FinalCTA />
-      </div>
+      <Hero />
+      <HowItWorks />
+      <Benefits />
+      <Security />
+      <FinalCTA />
       <Footer />
     </div>
   );

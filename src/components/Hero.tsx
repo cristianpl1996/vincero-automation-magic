@@ -29,14 +29,14 @@ const Hero = () => {
   return (
     <div 
       ref={heroRef}
-      className="min-h-screen bg-hero-gradient relative flex items-center overflow-hidden pt-20 section-padding"
+      className="min-h-screen bg-hero-gradient relative flex items-center overflow-hidden pt-20"
     >
       <div className="absolute w-full h-full top-0 left-0">
         <div className="absolute w-80 h-80 bg-vincero-orange/10 rounded-full blur-3xl top-20 -left-20"></div>
         <div className="absolute w-96 h-96 bg-vincero-blue/10 rounded-full blur-3xl bottom-10 -right-20"></div>
       </div>
 
-      <div className="w-full z-10 relative">
+      <div className="container mx-auto px-6 py-12 z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div ref={textRef} className="opacity-0 space-y-8">
             <div className="space-y-4">
