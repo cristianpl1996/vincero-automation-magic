@@ -84,13 +84,13 @@ const Security = () => {
   }, []);
   
   return (
-    <div id="security" ref={sectionRef} className="py-24 bg-vincero-black relative overflow-hidden">
+    <div id="security" ref={sectionRef} className="section-padding bg-vincero-black relative overflow-hidden">
       <div className="absolute w-full h-full top-0 left-0">
         <div className="absolute w-80 h-80 bg-vincero-blue/5 rounded-full blur-3xl top-1/3 -right-20"></div>
         <div className="absolute w-96 h-96 bg-vincero-orange/5 rounded-full blur-3xl bottom-10 -left-20"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="w-full relative z-10">
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1 text-sm font-medium text-vincero-lightBlue mb-4">
             Confianza Total
