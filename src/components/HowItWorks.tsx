@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import AnimatedStep from './AnimatedStep';
-import { Database, PieChart, Bot, Zap, Users, FileText, Server, Grid, Globe } from 'lucide-react';
+import { Database, PieChart, Bot, Zap, Users, FileText, Server, Grid, Globe, Mail, MessageSquare, Smartphone, Settings, Target, CheckCircle } from 'lucide-react';
 
 const stepData = [
   {
@@ -135,19 +135,78 @@ const stepData = [
     icon: <Bot className="w-6 h-6" />,
     animationContent: (
       <div className="relative w-full h-full flex items-center justify-center">
-        <div className="w-64 h-40 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md p-3">
+        <div className="w-full bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md p-5 h-full">
           <div className="flex justify-between mb-3">
-            <span className="text-xs text-vincero-lightBlue">Agente de Reactivación</span>
+            <span className="text-sm text-vincero-lightBlue font-semibold">Agente de Reactivación</span>
             <div className="flex space-x-1">
-              <div className="w-2 h-2 bg-vincero-orange rounded-full"></div>
-              <div className="w-2 h-2 bg-vincero-lightBlue rounded-full"></div>
+              <div className="w-2 h-2 bg-vincero-orange rounded-full pulse-small"></div>
+              <div className="w-2 h-2 bg-vincero-lightBlue rounded-full pulse-small"></div>
             </div>
           </div>
-          <div className="space-y-2">
-            <div className="h-2 w-full bg-white/10 rounded-full"></div>
-            <div className="h-2 w-5/6 bg-white/10 rounded-full"></div>
-            <div className="h-2 w-4/6 bg-white/10 rounded-full"></div>
-            <div className="h-6 w-full bg-vincero-blue/40 rounded-md mt-3"></div>
+          
+          <div className="space-y-4">
+            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="flex items-center mb-2">
+                <Target className="w-4 h-4 text-vincero-orange mr-2" />
+                <span className="text-xs font-medium text-white">Definir objetivo</span>
+              </div>
+              <div className="h-6 w-full bg-white/10 rounded-md flex items-center px-2">
+                <span className="text-xs text-white/70">Reactivar clientes inactivos</span>
+              </div>
+            </div>
+            
+            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+              <div className="flex items-center mb-2">
+                <Settings className="w-4 h-4 text-vincero-lightBlue mr-2" />
+                <span className="text-xs font-medium text-white">Canales de comunicación</span>
+              </div>
+              <div className="flex space-x-2">
+                <div className="flex items-center bg-vincero-blue/30 px-2 py-1 rounded">
+                  <MessageSquare className="w-3 h-3 text-green-400 mr-1" />
+                  <span className="text-xs text-white">WhatsApp</span>
+                </div>
+                <div className="flex items-center bg-vincero-blue/30 px-2 py-1 rounded">
+                  <Smartphone className="w-3 h-3 text-vincero-orange mr-1" />
+                  <span className="text-xs text-white">SMS</span>
+                </div>
+                <div className="flex items-center bg-vincero-blue/30 px-2 py-1 rounded opacity-50">
+                  <Mail className="w-3 h-3 text-vincero-lightBlue mr-1" />
+                  <span className="text-xs text-white">Email</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1s" }}>
+              <div className="flex items-center mb-2">
+                <MessageSquare className="w-4 h-4 text-vincero-lightBlue mr-2" />
+                <span className="text-xs font-medium text-white">Mensaje personalizado</span>
+              </div>
+              <div className="h-16 w-full bg-white/10 rounded-md p-2 overflow-hidden relative">
+                <div className="text-xs text-white/70">¡Hola [nombre]! Te extrañamos en...</div>
+                <div className="absolute bottom-0 left-0 h-0.5 bg-vincero-orange data-progress delay-2 w-0"></div>
+              </div>
+            </div>
+            
+            <div className="bg-vincero-blue/20 rounded-md p-3 transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1.4s" }}>
+              <div className="flex items-center mb-2">
+                <Bot className="w-4 h-4 text-vincero-orange mr-2" />
+                <span className="text-xs font-medium text-white">Automatización</span>
+              </div>
+              <div className="flex space-x-2">
+                <div className="flex items-center">
+                  <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
+                  <span className="text-xs text-white/70">Envío automático</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
+                  <span className="text-xs text-white/70">Monitoreo</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-vincero-orange/30 text-white text-xs font-medium text-center py-2 rounded-md cursor-pointer transform transition-all duration-500 opacity-0 animate-fade-in" style={{ animationDelay: "1.8s" }}>
+              Activar Agente
+            </div>
           </div>
         </div>
       </div>
