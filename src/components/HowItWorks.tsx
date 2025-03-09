@@ -80,30 +80,49 @@ const stepData = [
     icon: <PieChart className="w-6 h-6" />,
     animationContent: (
       <div className="relative w-full h-full flex flex-col items-center justify-center">
-        <div className="grid grid-cols-2 gap-2">
-          <div className="w-24 h-24 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-2">
-            <div className="w-full h-1.5 bg-white/10 rounded-full mb-1">
-              <div className="h-full w-3/4 bg-vincero-orange rounded-full"></div>
+        <div className="grid grid-cols-2 gap-6 w-full max-w-md mx-auto">
+          <div className="segment-card w-full h-28 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-3 transform transition-all duration-500">
+            <div className="w-full h-3 bg-white/10 rounded-full mb-3 overflow-hidden">
+              <div className="h-full w-3/4 bg-vincero-orange rounded-full segment-progress"></div>
             </div>
-            <span className="text-xs text-white/80">Alto valor</span>
+            <div className="flex items-center">
+              <div className="w-3 h-3 bg-vincero-orange/70 rounded-full mr-2 pulse-small"></div>
+              <span className="text-sm font-medium text-white/90">Alto valor</span>
+            </div>
+            <span className="text-xs text-white/70 mt-1">25% de jugadores</span>
           </div>
-          <div className="w-24 h-24 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-2">
-            <div className="w-full h-1.5 bg-white/10 rounded-full mb-1">
-              <div className="h-full w-1/2 bg-vincero-lightBlue rounded-full"></div>
+          
+          <div className="segment-card w-full h-28 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-3 transform transition-all duration-500 delay-150">
+            <div className="w-full h-3 bg-white/10 rounded-full mb-3 overflow-hidden">
+              <div className="h-full w-1/2 bg-vincero-lightBlue rounded-full segment-progress delay-1"></div>
             </div>
-            <span className="text-xs text-white/80">Frecuentes</span>
+            <div className="flex items-center">
+              <div className="w-3 h-3 bg-vincero-lightBlue/70 rounded-full mr-2 pulse-small"></div>
+              <span className="text-sm font-medium text-white/90">Frecuentes</span>
+            </div>
+            <span className="text-xs text-white/70 mt-1">30% de jugadores</span>
           </div>
-          <div className="w-24 h-24 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-2">
-            <div className="w-full h-1.5 bg-white/10 rounded-full mb-1">
-              <div className="h-full w-1/4 bg-white/60 rounded-full"></div>
+          
+          <div className="segment-card w-full h-28 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-3 transform transition-all duration-500 delay-300">
+            <div className="w-full h-3 bg-white/10 rounded-full mb-3 overflow-hidden">
+              <div className="h-full w-1/4 bg-white/60 rounded-full segment-progress delay-2"></div>
             </div>
-            <span className="text-xs text-white/80">Nuevos</span>
+            <div className="flex items-center">
+              <div className="w-3 h-3 bg-white/60 rounded-full mr-2 pulse-small"></div>
+              <span className="text-sm font-medium text-white/90">Nuevos</span>
+            </div>
+            <span className="text-xs text-white/70 mt-1">15% de jugadores</span>
           </div>
-          <div className="w-24 h-24 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-2">
-            <div className="w-full h-1.5 bg-white/10 rounded-full mb-1">
-              <div className="h-full w-2/3 bg-purple-400 rounded-full"></div>
+          
+          <div className="segment-card w-full h-28 bg-vincero-darkBlue/50 border border-vincero-lightBlue/20 rounded-md flex flex-col items-center justify-center p-3 transform transition-all duration-500 delay-450">
+            <div className="w-full h-3 bg-white/10 rounded-full mb-3 overflow-hidden">
+              <div className="h-full w-2/3 bg-purple-400 rounded-full segment-progress delay-3"></div>
             </div>
-            <span className="text-xs text-white/80">Inactivos</span>
+            <div className="flex items-center">
+              <div className="w-3 h-3 bg-purple-400/70 rounded-full mr-2 pulse-small"></div>
+              <span className="text-sm font-medium text-white/90">Inactivos</span>
+            </div>
+            <span className="text-xs text-white/70 mt-1">30% de jugadores</span>
           </div>
         </div>
       </div>
