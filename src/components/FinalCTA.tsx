@@ -55,7 +55,9 @@ const FinalCTA = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a
-              href="#"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfvYxwGtn9eYxJY1AbW_6lu8rFZdCa381Zou6Jo9kisOYdYQw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-vincero-orange hover:bg-vincero-orange/90 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center cta-button"
             >
               Solicita una demostración

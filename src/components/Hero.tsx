@@ -55,7 +55,9 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#contact"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfvYxwGtn9eYxJY1AbW_6lu8rFZdCa381Zou6Jo9kisOYdYQw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cta-button bg-vincero-orange hover:bg-vincero-orange/90 text-white px-8 py-3 rounded-lg text-base font-semibold flex items-center justify-center"
               >
                 Solicita una demostración

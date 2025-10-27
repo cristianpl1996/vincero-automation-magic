@@ -66,7 +66,9 @@ const Navbar = () => {
               Cuenta
             </a>
             <a
-              href="#contact"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfvYxwGtn9eYxJY1AbW_6lu8rFZdCa381Zou6Jo9kisOYdYQw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-vincero-orange hover:bg-vincero-orange/90 text-white px-4 py-2 rounded-md transition-all duration-300 text-sm font-medium transform hover:translate-y-[-2px]"
             >
               Solicitar Demo
@@ -123,7 +125,9 @@ const Navbar = () => {
               Cuenta
             </a>
             <a
-              href="#contact"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfvYxwGtn9eYxJY1AbW_6lu8rFZdCa381Zou6Jo9kisOYdYQw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-vincero-orange text-white py-2 rounded-md text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
